@@ -38,10 +38,11 @@ int main()
 				}
 				string str = dock;
 				cmatch result;
-				regex regular("([\\d]+)""(:)""([a-z]+)""(.+)""(:)""([\\d]+)");
+				/*regex regular("([\\d]+)""(:)""([a-z]+)""(.+)""(:)""([\\d]+)");*/
+				regex regular("([\\d]+)""(:)""(.+)""(:)""([\\d]+)");
 				if (regex_search(str.c_str(), result, regular))
 				{
-					cout << result[1] << "  " << result[3] << result[4] << "  " << "result: " << result[6] << endl;
+					cout << result[1] << "  " << result[3] << "  " << "result: " << result[5] << endl;
 				}
 			}
 
